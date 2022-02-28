@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Books</title>
+  <!-- <documentation at http://demos.jquerymobile.com/1.4.1/ > -->
+
+  <link href='https://fonts.googleapis.com/css?family=Nova Flat' rel='stylesheet'>
+
+  <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+  <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+  <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+  <script src="main.js"></script>
+  <link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+
+<body>
+
+  <!-- Start of  page ------------------------------------------------------------------>
+  <div data-role="page" id="home">
+
+    <!--   page header -->
+    <div data-role="header" data-theme='e'>
+      <h1>My Books</h1>
+      <div data-role="navbar" data-theme='b' id="nav_bar">
+        <ul>
+        <li><a href="#home" class='active-page'>Home Page</a></li>
+        <li><a href="#Load">Add a Book</a></li>
+        <li><a href="#ListAll">List All Books</a></li>
+        </ul>
+      </div><!-- /navbar -->
+      
+      <img class="center" src="images/download (1).jfif" alt="picture of movie reeels" class="center" >
+    </div>
+
+    <!--   page content -->
+    <!-- <div data-role="content" data-theme='b'>
+      <div class="newFont">
+        <h2> My Favorite of Books</h2>
+      </div>
+    </div> -->
+
+    <!--  page footer -->
+    <div data-role="footer" data-theme='b'>
+      <h1>Fasika</h1>
+    </div>
+  </div>
+  <!-- End of  page ------------------------------------------------------------------>
+
+
+
+
+
+  <div data-role="page" id="Load">
+    <!--  page header -->
+    <div data-role="header" data-theme='e'>
+      <h1>Add Books</h1>
+      <div data-role="navbar" data-theme='b' id="nav_bar">
+        <ul>
+          <li><a href="#home">Home Page</a></li>
+          <li><a href="#Load" class='active-page'>Add a Books</a></li>
+          <li><a href="#ListAll">List All Books</a></li>
+        </ul>
+      </div><!-- /navbar -->
+     
+      <img class="center" src="images/download (1).jfif" alt="books" class="center">
+    </div>
+
+
+
+
+    <!-- page content -->
+  
+    <div data-role="content" data-theme='e'>
+      Enter a new Book name <br />
+      <input type="text" value="" id="name" />
+      Author Name <br />
+      <input type="text" value="" id="author" />
+      Standard Book Number(SBN) <br />
+      <input type="text" value="" id="sbn" />
+      Published Year <br />
+      <input type="text" value="" id="year" />
+      
+        <div id="select">
+          <label for="select-genre">Select a Genre</label>
+          <select name="select-genre" id="select-genre">
+            <option value="Fiction">Fiction</option>
+            <option value="Non-Fiction">Non-Fiction</option>
+            <option value="Science">Science</option>
+            <option value="Art">Art</option>
+            <option value="History">History</option>
+            <!-- <option value="Musical">Musical</option>
+            <option value="Western">Western</option> -->
+          </select>
+        </div>
+    
+    
+       <input type="button" value=" Add Book" id="buttonAdd" data-inline="true" />
+       <!-- <input type="button" value="Clear Data" id="buttonClear" data-inline="true" />  -->
+    </div>
+
+       
+    
+    <!--   page footer -->
+    <div data-role="footer" data-theme='b'>
+      <h1>Fasika</h1>
+    </div>
+  </div>
+  <!-- End of  page ------------------------------------------------------------------>
+
+
+
+  <div data-role="page" id="ListAll">
+    <!--   page header -->
+    <div data-role="header" data-theme='e'>
+      <h1>My Book List</h1>
+      <div data-role="navbar" data-theme='b' id="nav_bar">
+        <ul>
+        <li><a href="#home">Home Page</a></li>
+        <li><a href="#Load">Add a Book</a></li>
+        <li><a href="#ListAll" class='active-page' >List All Books</a></li>
+        </ul>
+      </div><!-- /navbar -->
+     
+      <img class="center" id="image1" src="images/download (1).jfif" alt="picture of movie reeels" class="center">
+    </div>
+    <!--   page content -->
+    <div data-role="content" data-theme='e'>
+      <h3> My Favorite Books</h3>
+      <div id="divMovieList"></div>
+      <!-- <input type="button" value="Sort By Genre" id="buttonSortGenre" data-inline="true" /> -->
+      <!-- <input type="button" value="Sort By Title" id="buttonSortTitle" data-inline="true" />  -->
+    </div>
+
+
+    <!--   page footer -->
+    <div data-role="footer" data-theme='b'>
+      <h1>Fasika</h1>
+    </div>
+  </div>
+  </div>
+  <!-- End of  page ------------------------------------------------------------------>
+
+
+  <!-- Start of  page -->
+  <div data-role="page" id="details">
+  
+    <!--   page header -->
+    <div data-role="header" data-theme='a'>
+      <h1>My Books</h1>
+      <div data-role="navbar" data-theme='b'>
+        <ul>
+          <li><a href="#home">Home Page</a></li>
+          <li><a href="#Load">Add a Book</a></li>
+          <li><a href="#ListAll">List All Books</a></li>
+        </ul>
+      </div><!-- /navbar -->
+           
+            <img class="center"src="images/download (1).jfif" alt="books" class="center">
+    </div>
+  
+    <!--  content -->
+    <div data-role="content" data-theme='b'>
+      <p> Here are the details</p>
+      <p id="oneName"></p>
+      <p id="oneAuthor"></p>
+      <p id="oneSnb"></p>
+      <p id="oneYear"></p>
+      <!-- <p id="oneURL" hidden></p> -->
+      <input type="button" value="Trailer" id="trailer" />
+    </div> 
+    
+  
+    <!--    footer -->
+    <div data-role="footer" data-theme='b'>
+      <h1>Fasika</h1>
+    </div>
+  
+  </div>
+
+
+
+  <!-- <div data-role="page" id="ListSome">
+    
+    <div data-role="header" data-theme='a'>
+      <h1>Movie List By Genre</h1>
+      <div data-role="navbar" data-theme='b' id="nav_bar">
+        <ul>
+          <li><a href="#home">Home Page</a></li>
+          <li><a href="#Load">Add Movie</a></li>
+          <li><a href="#ListAll">List All Movies</a></li>
+        </ul>
+      </div>
+        <div class="myHeader">Your site to organize your favorite movies.</div>
+        <img class="center" src="images/download (1).jfif" alt="books" class="center">
+    </div> -->
+    <!--   page content -->
+    <div data-role="content" data-theme='e'>
+      <!-- <p> Here are my Movies in that Genre</p> -->
+      <!-- <div id="divMovieListSubset"></div>
+      <input type="button" value="Show just Comedy" id="buttonSubsetComedy" data-inline="true" />
+      <input type="button" value="Show just Drama" id="buttonSubsetDrama" data-inline="true" /> -->
+    </div>
+  
+  
+    <!--   page footer -->
+    <div data-role="footer" data-theme='b'>
+      <h1>Fasika</h1>
+    </div>
+  </div>
+  </div>
+  <!-- End of  page ------------------------------------------------------------------>
+
+
+
+  <p id="IDparmHere" hidden>change1</p>  <!--hidden, a place to stash the user ID -->
+</body>
+
+</html>
